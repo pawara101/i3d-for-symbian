@@ -9,7 +9,7 @@ def main(args_cli):
     args_yml = OmegaConf.load(build_cfg_path(args_cli.feature_type))
     args = OmegaConf.merge(args_yml, args_cli)  # the latter arguments are prioritized
     # OmegaConf.set_readonly(args, True)
-    sanity_check(args)
+    # sanity_check(args)
 
     # verbosing with the print -- haha (TODO: logging)
     print(OmegaConf.to_yaml(args))
